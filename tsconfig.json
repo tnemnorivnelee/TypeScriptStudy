@@ -1,0 +1,55 @@
+{
+	"compilerOptions": {
+		/* 최신 JavaScript 기능 사용 */
+		"target": "ES2022",
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"lib": ["ES2022", "DOM", "DOM.Iterable"],
+
+		/* 모던 모듈 시스템 */
+		"allowImportingTsExtensions": true,
+		"moduleDetection": "force",
+		"noEmit": true,
+
+		/* 출력 설정 (빌드 시에만 사용) */
+		"outDir": "./dist",
+		"rootDir": "./src",
+		"removeComments": true,
+
+		/* 타입 검사 (매우 엄격) */
+		"strict": true,
+		"exactOptionalPropertyTypes": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+
+		/* 모듈 해석 */
+		"baseUrl": "./",
+		"paths": {
+			"@/*": ["src/*"],
+			"@utils/*": ["src/utils/*"],
+			"@types/*": ["src/types/*"]
+		},
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+
+		/* 개발 도구 */
+		"sourceMap": true,
+		"declaration": true,
+		"declarationMap": true,
+		"incremental": true,
+		"tsBuildInfoFile": "./dist/.tsbuildinfo",
+
+		/* 기타 */
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		"verbatimModuleSyntax": true
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "dist", "**/*.test.ts"]
+}
